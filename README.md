@@ -1,5 +1,5 @@
-# NeuronGallery
- 
+# NeuronGallery  
+https://jiumao2.github.io/NeuronGallery/  
 ## to do 
 - find the images of a neuron by Animal/date/Number/single unit?
 - Neural Info: Animal, date, brain region, position, depth, electrode info, related behavior, features, notes, additional figures
