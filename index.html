@@ -1,2 +1,146 @@
-<h1>Hello World</h1>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Neuron Gallery</title>
+        <script type="text/javascript" src="jquery.js"></script>
+        
+        <style type="text/css">
+            body{
+                margin: 20px;
+            }
+            input{
+                width: 150px;
+                height: 30px;
+            }
+            ul{
+                display: none;
+                list-style: none;
+                width: 150px;
+                padding: 0;
+                margin: 0;
+            }
+            li{
+                height: 20px;
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+            input{
+                font-size: 14px;
+            }
+            input[type="checkbox"]{
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                margin: 5px 5px 0 0;
+                vertical-align: top;
+            }
+            #id_div{
+                width: 150px;
+            }
+        </style>
+    </head>
+<body>
+<h1>Neuron Gallery</h1>
 <a href="./Pages/test/index.html">Click this</a>
+<form action="">
+<select name="Animals">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+</select>
+</form>
+
+<div id="id_div_animal">
+    <button onclick="show_options_animal();">Choose Animals</button>
+    <ul id="id_animal_options">
+        <li><input type="checkbox" name="select_checkbox_animal" onclick="chk_changed('animal');" value="All"/>All</li>
+        <li><input type="checkbox" name="select_checkbox_animal" onclick="chk_changed('animal');" value="Russo"/>Russo</li>
+        <li><input type="checkbox" name="select_checkbox_animal" onclick="chk_changed('animal');" value="Urey"/>Urey</li> 
+    </ul>
+</div>
+
+<div id="id_div_date">
+    <button onclick="show_options_date();">Choose Dates</button>
+    <ul id="id_date_options">
+        <li><input type="checkbox" name="select_checkbox_date" onclick="chk_changed('date');" value="All"/>All</li>
+        <li><input type="checkbox" name="select_checkbox_date" onclick="chk_changed('date');" value="2022.07.30"/>2022.07.30</li>
+        <li><input type="checkbox" name="select_checkbox_date" onclick="chk_changed('date');" value="2022.07.31"/>2022.07.31</li>
+    </ul>
+</div>
+
+<div id="id_div_brain_region">
+    <button onclick="show_options_brain_region();">Choose Brain Regions</button>
+    <ul id="id_brain_region_options">
+        <li><input type="checkbox" name="select_checkbox_brain_region" onclick="chk_changed('brain_region');" value="All"/>All</li>
+        <li><input type="checkbox" name="select_checkbox_brain_region" onclick="chk_changed('brain_region');" value="M1"/>M1</li>
+        <li><input type="checkbox" name="select_checkbox_brain_region" onclick="chk_changed('brain_region');" value="DLS"/>DLS</li>
+    </ul>
+</div>
+
+<div id="id_div_other_features">
+    <button onclick="$('#id_div_features').show();">Choose other features</button>
+    <div id="id_div_features" style="display: none;">
+        <h2>Features</h2>
+        <ul id="id_feature_options" style="display:inline;">
+            <li><input type="checkbox" name="select_checkbox_feature" onclick="chk_changed('feature');" value="All"/>All</li>
+            <li><input type="checkbox" name="select_checkbox_feature" onclick="chk_changed('feature');" value="M1"/>M1</li>
+            <li><input type="checkbox" name="select_checkbox_feature" onclick="chk_changed('feature');" value="DLS"/>DLS</li>
+        </ul>
+        <button onclick="$('#id_div_features').hide();">Close</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //显示 - 隐藏下拉列表
+    $("#id_div_animal").mouseleave( function(){
+        $("#id_animal_options").hide();
+    } );
+    $("#id_div_date").mouseleave( function(){
+        $("#id_date_options").hide();
+    } );
+    $("#id_div_brain_region").mouseleave( function(){
+        $("#id_brain_region_options").hide();
+    } );
+
+    function show_options_animal()
+    {
+        if( $("#id_animal_options").is(":hidden") )
+            $("#id_animal_options").show();
+        else
+            $("#id_animal_options").hide();
+    }
+    function show_options_date(){
+        if( $("#id_date_options").is(":hidden") )
+            $("#id_date_options").show();
+        else
+            $("#id_date_options").hide();        
+    }
+    function show_options_brain_region(){
+        if( $("#id_brain_region_options").is(":hidden") )
+            $("#id_brain_region_options").show();
+        else
+            $("#id_brain_region_options").hide();
+    }
+
+    //复选框勾选，更新显示
+    function chk_changed(name)
+    {
+        var str_selected = "";
+        var lstChk = document.getElementsByName( "select_checkbox_" + name);
+
+        for( var n = 0; n < lstChk.length; n++ )
+        {
+            if(lstChk[n].value == 'All' && lstChk[n].checked){
+                for( var i = 0; i < lstChk.length; i++ ){
+                    lstChk[i].checked = true;
+                }
+            }
+        }
+        // $("#id_select").val( str_selected.substring( 1, str_selected.length ) );
+    }
+</script>
+
+</body>
+</html>
+
