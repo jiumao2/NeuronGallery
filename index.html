@@ -91,6 +91,16 @@
     </div>
 </div>
 
+<div id="img_result_1">
+    <h3>Urey 2021.11.24  
+        Channel 4 Cluster 1</h3>
+    <img src="Images/Urey/20221124/TrajComparing_Unit1_Press.png">
+</div>
+
+<div id="id_img">
+
+</div>
+
 <script type="text/javascript">
     //显示 - 隐藏下拉列表
     $("#id_div_animal").mouseleave( function(){
@@ -139,6 +149,49 @@
         }
         // $("#id_select").val( str_selected.substring( 1, str_selected.length ) );
     }
+
+    function get_html_child_img_result(img_path){
+        html = '\
+        <div id="img_result_1">\
+            <h3>Urey 2021.11.24  \
+                Channel 4 Cluster 1</h3> \
+        <img src="Images/Urey/20221124/TrajComparing_Unit1_Press.png"> \
+        </div> \
+        '
+        return html
+    }
+    function searchFiles(path){
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var f = fso.GetFolder(path);
+        var fc = new Enumerator(f.files);
+        var s = "";
+        for (; !fc.atEnd(); fc.moveNext())
+            {
+                s += fc.item();
+                s += "<br/>";
+            }
+            fk = new Enumerator(f.SubFolders);
+            for (; !fk.atEnd(); fk.moveNext())
+            {
+            s += fk.item();
+            s += "<br/>";
+            }
+
+            textarea.innerHTML = s
+    }
+    window.onload = function(param){
+        console.log('Loading...')
+        a = new FileSystemDirectoryReader()
+        console.log(a)
+        // const filenames = searchFiles('./Images')
+        // console.log(filenames)
+        filenames = [1,2,3,4,5]
+        for (var i=0;i<filenames.length;i++){
+            $('#id_img').append($(get_html_child_img_result(filenames[i])))
+        }        
+    }
+
+
 </script>
 
 </body>
