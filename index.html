@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>Neuron Gallery</title>
         <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/BrowserFS/2.0.0/browserfs.min.js"></script>
+
         
         <style type="text/css">
             body{
@@ -100,7 +103,6 @@
 <div id="id_img">
 
 </div>
-
 <script type="text/javascript">
     //显示 - 隐藏下拉列表
     $("#id_div_animal").mouseleave( function(){
@@ -161,34 +163,38 @@
         return html
     }
     function searchFiles(path){
-        var fso = new ActiveXObject("Scripting.FileSystemObject");
-        var f = fso.GetFolder(path);
-        var fc = new Enumerator(f.files);
-        var s = "";
-        for (; !fc.atEnd(); fc.moveNext())
-            {
-                s += fc.item();
-                s += "<br/>";
-            }
-            fk = new Enumerator(f.SubFolders);
-            for (; !fk.atEnd(); fk.moveNext())
-            {
-            s += fk.item();
-            s += "<br/>";
-            }
-
-            textarea.innerHTML = s
+        var files = fs.readdirSync(path)
+        return files
     }
     window.onload = function(param){
         console.log('Loading...')
-        a = new FileSystemDirectoryReader()
-        console.log(a)
-        // const filenames = searchFiles('./Images')
+        BrowserFS.install(window);
+        // Configures BrowserFS to use the LocalStorage file system.
+        BrowserFS.configure({
+        fs: "LocalStorage"
+        }, function(e) {
+        if (e) {
+            // An error happened!
+            throw e;
+        }
+        // Otherwise, BrowserFS is ready-to-use!
+        });
+        // var fs = require('fs');
+        // let filenames = fs.readdir('../Images/Urey/20221124')
         // console.log(filenames)
-        filenames = [1,2,3,4,5]
-        for (var i=0;i<filenames.length;i++){
-            $('#id_img').append($(get_html_child_img_result(filenames[i])))
-        }        
+        // filenames = [1,2,3,4,5]
+        var xmlhttp=new XMLHttpRequest()
+        xmlhttp.onreadystatechange = function(){
+            console.log(xmlhttp.status)
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(xmlhttp.responseText)
+            }
+        }
+        xmlhttp.open('GET','README.md',true)
+        xmlhttp.send()
+        // for (var i=0;i<filenames.length;i++){
+        //     $('#id_img').append($(get_html_child_img_result(filenames[i])))
+        // }        
     }
 
 
