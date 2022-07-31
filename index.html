@@ -167,30 +167,20 @@
         return files
     }
     window.onload = function(param){
-        console.log('Loading...')
-        BrowserFS.install(window);
-        // Configures BrowserFS to use the LocalStorage file system.
-        BrowserFS.configure({
-        fs: "LocalStorage"
-        }, function(e) {
-        if (e) {
-            // An error happened!
-            throw e;
-        }
-        // Otherwise, BrowserFS is ready-to-use!
-        });
-        // var fs = require('fs');
-        // let filenames = fs.readdir('../Images/Urey/20221124')
-        // console.log(filenames)
-        // filenames = [1,2,3,4,5]
         var xmlhttp=new XMLHttpRequest()
         xmlhttp.onreadystatechange = function(){
             console.log(xmlhttp.status)
             if (this.readyState == 4 && this.status == 200) {
                 console.log(xmlhttp.responseText)
+                console.log(xmlhttp.responseURL)
+                console.log(xmlhttp.response)
+                console.log(xmlhttp.responseXML)
             }
         }
         xmlhttp.open('GET','README.md',true)
+        xmlhttp.send()
+
+        xmlhttp.open('GET','Images/Urey/20221124',true)
         xmlhttp.send()
         // for (var i=0;i<filenames.length;i++){
         //     $('#id_img').append($(get_html_child_img_result(filenames[i])))
