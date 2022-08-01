@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Neuron Gallery</title>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="Neurons.js"></script>
+        <script type="text/javascript" src="util.js"></script>
+    </head>
+    <body>
+        <div id="img-detail"></div>
+        <script>
+            $(document).ready(function(){
+                var ID = window.location.search.substr(1);
+                var res = LoadNeuronData();
+                var s = res.data;
+                var count = res.count;
+                s = s.replaceAll('\\', '\\\\');
+                var data = JSON.parse(s)
+                console.log(count) 
+                console.log(data)  
+                console.log(get_html_child_img_result(data[ID]))   
+                $("#img-detail").append(get_html_child_img_result(data[ID]));         
+            })
+
+        </script>
+    </body>
+    
+</html>
