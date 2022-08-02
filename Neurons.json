@@ -44,8 +44,8 @@
         "UnitNum": "5",
         "ImgPath": "Images/Urey/20211124/TrajComparing_Unit5_Press.png",
         "OtherImgPath": "",
-        "Lift": "1",
-        "Press": "",
+        "Lift": "",
+        "Press": "1",
         "Holding": "",
         "Trigger": "",
         "Release": "1"

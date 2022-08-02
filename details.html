@@ -20,7 +20,20 @@
                 console.log(count) 
                 console.log(data)  
                 console.log(get_html_child_img_result(data[ID]))   
-                $("#img-detail").append(get_html_child_img_result(data[ID]));         
+                var features = Object.keys(data[ID]);
+                var value;
+                for(var k=0;k<features.length;k++){
+                    value = data[ID][features[k]];
+                    if(value=="") value = '0';
+                    $("#img-detail").append($("<p></p>").text(features[k]+': '+value));
+                }
+                $("#img-detail").append($("<img>").attr("src",data[ID]["ImgPath"]))
+                
+                var other_img_path = data[ID]["OtherImgPath"].split(';');
+                for(var k=0;k<other_img_path.length;k++){
+                    $("#img-detail").append($("<img>").attr("src",other_img_path[k]));
+                }
+
             })
 
         </script>

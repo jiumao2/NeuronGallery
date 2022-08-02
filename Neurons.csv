@@ -1,7 +1,7 @@
 ID,Animal,Date,Channel,Cluster,Region,Path,UnitNum,ImgPath,OtherImgPath,Lift,Press,Holding,Trigger,Release
 1,Urey,11/24/2021 9:30,1,1,M1,G:\WHBWork\Ephys\Urey\Sessions\20211124\RTarrayAll.mat,1,Images/Urey/20211124/TrajComparing_Unit1_Press.png,,1,,,,
 2,Urey,11/24/2021 9:30,4,1,M1,G:\WHBWork\Ephys\Urey\Sessions\20211124\RTarrayAll.mat,3,Images/Urey/20211124/TrajComparing_Unit3_Press.png,,,1,,,
-3,Urey,11/24/2021 9:30,5,1,M1,G:\WHBWork\Ephys\Urey\Sessions\20211124\RTarrayAll.mat,5,Images/Urey/20211124/TrajComparing_Unit5_Press.png,,1,,,,1
+3,Urey,11/24/2021 9:30,5,1,M1,G:\WHBWork\Ephys\Urey\Sessions\20211124\RTarrayAll.mat,5,Images/Urey/20211124/TrajComparing_Unit5_Press.png,,,1,,,1
 4,Urey,11/24/2021 9:30,8,1,M1,G:\WHBWork\Ephys\Urey\Sessions\20211124\RTarrayAll.mat,7,Images/Urey/20211124/TrajComparing_Unit7_Press.png,,,1,1,,
 5,Urey,11/24/2021 9:30,8,2,M1,G:\WHBWork\Ephys\Urey\Sessions\20211124\RTarrayAll.mat,8,Images/Urey/20211124/TrajComparing_Unit8_Press.png,,,,,,
 6,Urey,11/24/2021 9:30,10,2,M1,G:\WHBWork\Ephys\Urey\Sessions\20211124\RTarrayAll.mat,12,Images/Urey/20211124/TrajComparing_Unit12_Press.png,,,1,1,,1

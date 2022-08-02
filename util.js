@@ -11,6 +11,12 @@ function show_options_date(){
     else
         $("#id_date_options").hide();        
 }
+function show_options_features(){
+    if( $("#id_div_features").is(":hidden") )
+        $("#id_div_features").show();
+    else
+        $("#id_div_features").hide();        
+}
 
 //复选框勾选，更新显示
 function chk_changed(name)
@@ -68,12 +74,14 @@ function get_features_value(data){
     var count = data.count;
     var value;
 
-    var useless_features = ['Animal','Date','ID','ImgPath','Path','OtherImgPath','UnitNum','cluster'];
-    features.forEach(function(item, index, arr) {
-        if(useless_features.indexOf(item)!=-1) {
-            arr.splice(index, 1);
+    var useless_features = ['Animal','Date','ID','ImgPath','Path','OtherImgPath','UnitNum','Cluster'];
+    for(var k=0;k<useless_features.length;k++){
+        var temp = features.indexOf(useless_features[k]);
+        if(temp!=-1){
+            features.splice(temp,1);
         }
-    });
+    }
+    console.log(features)
 
     for(var k=0;k<features.length;k++){
         out[features[k]] = [];
@@ -85,6 +93,7 @@ function get_features_value(data){
             if(value == '') value = '0';
             if(out[features[j]].indexOf(value)==-1){
                 out[features[j]].push(value);
+                out[features[j]].sort((a,b)=>{return parseInt(a)-parseInt(b)})
             }
         }
     }
@@ -95,7 +104,7 @@ function get_features_value(data){
 
 function get_filter(){
     var filter = new Object();
-    filter['features'] = ['Animal','Date'];
+    var features = ['Animal','Date'];
 
     var Animal = [];
     var lstChk = document.getElementsByName( "select_checkbox_animal");
@@ -116,8 +125,23 @@ function get_filter(){
         }
     }
     filter['Date']=Date;
-    console.log(filter);
+    
+    var ps = $(".feature-checkbox");
+    var feature;
+    for(var k=0;k<ps.length;k++){
+        feature = ps[k].getAttribute('feature');
+        features.push(feature)
+        filter[feature] = [];
+        var c = ps[k].children;
+        for(var j=0;j<c.length;j++){
+            if(c[j].type=='checkbox'&&c[j].checked){
+                filter[feature].push(c[j].value);
+            }
+        }
+    }
 
+    filter['features'] = features;
+    console.log(filter)
     return filter
 }
 

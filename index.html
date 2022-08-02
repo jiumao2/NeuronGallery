@@ -60,15 +60,6 @@
     </head>
 <body>
 <h1>Neuron Gallery</h1>
-<a href="./Pages/test/index.html">Click this</a>
-<form action="">
-<select name="Animals">
-<option value="volvo">Volvo</option>
-<option value="saab">Saab</option>
-<option value="fiat">Fiat</option>
-<option value="audi">Audi</option>
-</select>
-</form>
 
 <div id="id_div_animal">
     <button onclick="show_options_animal();">Choose Animals</button>
@@ -85,15 +76,9 @@
 </div>
 
 <div id="id_div_other_features">
-    <button onclick="$('#id_div_features').show();">Choose other features</button>
+    <button onclick="show_options_features();">Choose other features</button>
     <div id="id_div_features" style="display: none;">
         <h2>Features</h2>
-        <ul id="id_feature_options" style="display:inline;">
-            <li><input type="checkbox" name="select_checkbox_feature" onclick="chk_changed('feature');" value="All"/>All</li>
-            <li><input type="checkbox" name="select_checkbox_feature" onclick="chk_changed('feature');" value="M1"/>M1</li>
-            <li><input type="checkbox" name="select_checkbox_feature" onclick="chk_changed('feature');" value="DLS"/>DLS</li>
-        </ul>
-        <button onclick="$('#id_div_features').hide();">Close</button>
     </div>
 </div>
 
@@ -120,17 +105,6 @@
     </div>
 </div>
 <script type="text/javascript">
-    //显示 - 隐藏下拉列表
-    $("#id_div_animal").mouseleave( function(){
-        $("#id_animal_options").hide();
-    } );
-    $("#id_div_date").mouseleave( function(){
-        $("#id_date_options").hide();
-    } );
-    $("#id_div_brain_region").mouseleave( function(){
-        $("#id_brain_region_options").hide();
-    } );
-
     $(document).ready(function() {
         var res = LoadNeuronData();
         var s = res.data;
@@ -140,9 +114,6 @@
         console.log(count) 
         console.log(data)
         data['count'] = count;
-
-        console.log(get_animals_date(data))
-        console.log(get_features_value(data))
 
         var currentPage = 1;
         var pageSize = 5;
@@ -166,6 +137,25 @@
                     chk_changed('animal');
                     refresh_date_options(animal_date);
                 })
+        }
+
+        var feature_value = get_features_value(data);
+        var features = feature_value['features'];
+        var p;
+        for(var k=0;k<features.length;k++){
+            var p = $("<p></p>").text(features[k]+": ")
+                .attr("class","feature-checkbox")
+                .attr("feature",features[k]);
+            for(var j=0;j<feature_value[features[k]].length;j++){
+                p.append($("<input>")
+                    .attr("type","checkbox")
+                    .attr("value",feature_value[features[k]][j])
+                    .attr("checked","true")
+                );
+                p.append(feature_value[features[k]][j])
+            }
+
+            $("#id_div_features").append(p)
         }
         
         $("#btn-confirm").click(function(){
