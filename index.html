@@ -1,63 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Neuron Gallery</title>
-        <script type="text/javascript" src="jquery.js"></script>
-        <script type="text/javascript" src="Neurons.js"></script>
-        <script type="text/javascript" src="util.js"></script>
+<head>
+    <meta charset="utf-8">
+    <title>Neuron Gallery</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="Neurons.js"></script>
+    <script type="text/javascript" src="util.js"></script>
 
-        
-        <style type="text/css">
-            body{
-                margin: 20px;
-            }
-            input{
-                width: 150px;
-                height: 30px;
-            }
-            ul{
-                display: none;
-                list-style: none;
-                width: 150px;
-                padding: 0;
-                margin: 0;
-            }
-            li{
-                height: 20px;
-                font-size: 20px;
-                margin-bottom: 5px;
-            }
-            input{
-                font-size: 14px;
-            }
-            input[type="checkbox"]{
-                width: 20px;
-                height: 20px;
-                line-height: 20px;
-                margin: 5px 5px 0 0;
-                vertical-align: top;
-            }
-            #id_div{
-                width: 150px;
-            }
- 
-            .layui-box a {
-                padding: 5px 10px;
-                text-decoration-line:none;
-                background-color: #f4f4f5;
-                margin-left: 5px;
-                color: #606266;
-                border-radius: 2px;
-            }
-        
-            .layui-box  .aaa {
-                background-color: #58C7C7;
-                color: #fff;
-            }
-
-        </style>
-    </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
 <h1>Neuron Gallery</h1>
 
@@ -78,15 +29,20 @@
 <div id="id_div_other_features">
     <button onclick="show_options_features();">Choose other features</button>
     <div id="id_div_features" style="display: none;">
-        <h2>Features</h2>
     </div>
 </div>
 
-<button id="btn-confirm">Find Neurons</button>
+<div class="div-center">
+    <button id="btn-confirm">Find Neurons</button>    
+</div>
+
 
 <div id="id_img">
     <h2>Here are the neurons</h2>
-    <div class="layui-box layui-laypage layui-laypage-molv" id="layui-laypage-1" style="margin-top: 10px;font-size: 14px">
+</div>
+
+<div id="bottom-bar">
+    <div class="layui-box layui-laypage layui-laypage-molv" id="layui-laypage-1">
 		<span class="layui-laypage-limits">
 			<select lay-ignore="" style="height: 25px" class="pageSizeSelect">
 				<option value="5" selected >5 条/页</option>
@@ -104,6 +60,7 @@
 		<span class="layui-laypage-count">共 120 条</span>
     </div>
 </div>
+
 <script type="text/javascript">
     $(document).ready(function() {
         var res = LoadNeuronData();
@@ -122,8 +79,14 @@
         var is_filtered = false;
         var data_filtered;
 
-        for (var i=pageSize*(currentPage-1)+1;i<=pageSize*currentPage;i++){
-            $('#layui-laypage-1').before($(get_html_child_img_result(data[i])))
+        var i0 = pageSize*(currentPage-1)+1;
+        for (var i=i0;i<=Math.min(pageSize*currentPage,total);i++){
+            if ((i-i0)%2==0){
+                $('#id_img').append($(get_html_child_img_result(data[i],'left')))
+            }
+            else{
+                $('#id_img').append($(get_html_child_img_result(data[i],'right')))
+            }    
         }
 
         var animal_date = get_animals_date(data);
@@ -162,6 +125,7 @@
             data_filtered = get_filtered_data(data);
             currentPage = 1;
             total = data_filtered.length;
+            is_filtered = true
             sufa();
         })
 
@@ -236,16 +200,29 @@
             }
             $(".pageNumber").remove();
             $(".layui-laypage-pre").after(content);
-            $(".img-result").remove();
+            $(".div-result-left").remove();
+            $(".div-result-right").remove();
             $(".layui-laypage-count").text("共"+total+"条");
             if(is_filtered){
-                for (var i=pageSize*(currentPage-1);i<Math.min(pageSize*currentPage,total);i++){
-                    $('#layui-laypage-1').before($(get_html_child_img_result(data_filtered[i])))
-                }                
+                var i0 = pageSize*(currentPage-1)+1;
+                for (var i=i0;i<=Math.min(pageSize*currentPage,total);i++){
+                    if ((i-i0)%2==0){
+                        $('#id_img').append($(get_html_child_img_result(data_filtered[i],'left')))
+                    }
+                    else{
+                        $('#id_img').append($(get_html_child_img_result(data_filtered[i],'right')))
+                    }    
+                }             
             }
             else{
-                for (var i=pageSize*(currentPage-1)+1;i<=Math.min(pageSize*currentPage,total);i++){
-                    $('#layui-laypage-1').before($(get_html_child_img_result(data[i])))
+                var i0 = pageSize*(currentPage-1)+1;
+                for (var i=i0;i<=Math.min(pageSize*currentPage,total);i++){
+                    if ((i-i0)%2==0){
+                        $('#id_img').append($(get_html_child_img_result(data[i],'left')))
+                    }
+                    else{
+                        $('#id_img').append($(get_html_child_img_result(data[i],'right')))
+                    }    
                 }
             }
 

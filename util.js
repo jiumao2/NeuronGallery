@@ -34,12 +34,12 @@ function chk_changed(name)
     }
 }
 
-function get_html_child_img_result(data){
+function get_html_child_img_result(data, pos){
     html = '\
-    <div id="img_result_'+data.ID+'" class="img-result">\
-        <a href="details.html?'+data.ID+'">'+data.Animal+' '+data.Date+'  \
-            Channel '+data.Channel+' Cluster '+data.Cluster+'</a> \
-    <img src="'+data.ImgPath+'"> \
+    <div id="div-result-'+data.ID+'" class="div-result-'+pos+'">\
+        <p><a href="details.html?'+data.ID+'">'+data.Animal+' '+data.Date+'  \
+            Channel '+data.Channel+' Cluster '+data.Cluster+'</a></p> \
+    <img class="img-result" src="'+data.ImgPath+'"> \
     </div> \
     '
     return html
