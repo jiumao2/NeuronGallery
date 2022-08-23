@@ -1,4 +1,12 @@
-button{
+h1{
+    padding: 30px 0;
+}
+
+hr{
+    clear: both;
+}
+
+.buttons{
     background: #3498db;
     background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
     background-image: -moz-linear-gradient(top, #3498db, #2980b9);
@@ -15,11 +23,11 @@ button{
     text-decoration: none;
     margin-top: 5px;
     margin-bottom: 5px;
-    width: 250px;
-    height: 60px;
+    width: 200px;
+    height: 50px;
   }
   
-button:hover{
+.buttons:hover{
     background: #3cb0fd;
     background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
     background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
@@ -27,7 +35,56 @@ button:hover{
     background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
+    cursor: pointer;
 }
+
+#btn-confirm{
+    background: #db3434;
+    background-image: -webkit-linear-gradient(top, #db3434, #b92929);
+    background-image: -moz-linear-gradient(top, #db3434, #b92929);
+    background-image: -ms-linear-gradient(top, #db3434, #b92929);
+    background-image: -o-linear-gradient(top, #db3434, #b92929);
+    background-image: linear-gradient(to bottom, #db3434, #b92929);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 250px;
+    height: 60px;
+  }
+  
+#btn-confirm:hover{
+        background: #fd3c3c;
+        background-image: -webkit-linear-gradient(top,#fd3c3c, #db3434);
+        background-image: -moz-linear-gradient(top, #fd3c3c, #db3434);
+        background-image: -ms-linear-gradient(top, #fd3c3c, #db3434);
+        background-image: -o-linear-gradient(top, #fd3c3c, #db3434);
+        background-image: linear-gradient(to bottom, #fd3c3c, #db3434);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.div-buttons{
+    float: left;
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.div-options{
+    float: right;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .div-center{
     width: 100%;
     margin: 0 auto;
@@ -53,7 +110,6 @@ ul{
     font-size: 20px;
 }
 li{
-    height: 20px;
     width: 200px;
     font-size: 20px;
     margin-bottom: 5px;
@@ -63,7 +119,6 @@ li{
     margin-left: 20px;
 }
 p{
-    height: 10px;
     font-size: 20px;
     margin-bottom: 5px;
 }

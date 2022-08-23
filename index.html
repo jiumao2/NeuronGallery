@@ -12,30 +12,49 @@
 <body>
 <h1>Neuron Gallery</h1>
 
-<div id="id_div_animal">
-    <button onclick="show_options_animal();">Choose Animals</button>
-    <ul id="id_animal_options">
-        <li><input type="checkbox" name="select_checkbox_animal" onclick="chk_changed('animal');" value="All"/>All</li> 
-    </ul>
-</div>
+<hr>
 
-<div id="id_div_date">
-    <button onclick="show_options_date();">Choose Dates</button>
-    <ul id="id_date_options">
-        <li><input type="checkbox" name="select_checkbox_date" onclick="chk_changed('date');" value="All"/>All</li>
-    </ul>
-</div>
-
-<div id="id_div_other_features">
-    <button onclick="show_options_features();">Choose other features</button>
-    <div id="id_div_features" style="display: none;">
+<div class="div-button-option">
+    <div class="div-buttons">
+        <button class="buttons" onclick="show_options_animal();">Animals</button>
+    </div>
+    <div class="div-options">
+        <ul id="id_animal_options">
+            <li><input type="checkbox" name="select_checkbox_animal" onclick="chk_changed('animal');" value="All"/>All</li> 
+        </ul>        
     </div>
 </div>
+
+<hr>
+
+<div class="div-button-option">
+    <div class="div-buttons">
+        <button class="buttons" onclick="show_options_date();">Dates</button>
+    </div>
+    <div class="div-options">
+        <ul id="id_date_options">
+            <li><input type="checkbox" name="select_checkbox_date" onclick="chk_changed('date');" value="All"/>All</li>
+        </ul>       
+    </div>
+</div>
+
+<hr>
+
+<div class="div-button-option">
+    <div class="div-buttons">
+        <button class="buttons" onclick="show_options_features();">Other features</button>
+    </div>
+    <div class="div-options">
+        <div id="id_div_features" style="display: none;">
+        </div>         
+    </div>
+</div>
+
+<hr>
 
 <div class="div-center">
     <button id="btn-confirm">Find Neurons</button>    
 </div>
-
 
 <div id="id_img">
     <h2>Here are the neurons</h2>
