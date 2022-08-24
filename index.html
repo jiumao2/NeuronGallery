@@ -42,7 +42,7 @@
 
 <div class="div-button-option">
     <div class="div-buttons">
-        <button class="buttons" onclick="show_options_features();">Other features</button>
+        <button class="buttons" onclick="show_options_features();">Features</button>
     </div>
     <div class="div-options">
         <div id="id_div_features" style="display: none;">
@@ -64,7 +64,7 @@
     <div class="layui-box layui-laypage layui-laypage-molv" id="layui-laypage-1">
 		<span class="layui-laypage-limits">
 			<select lay-ignore="" style="height: 25px" class="pageSizeSelect">
-				<option value="5" selected >5 条/页</option>
+				<option value="5" selected >6 条/页</option>
 				<option value="10">10 条/页</option>
 				<option value="20">20 条/页</option>
 				<option value="30">30 条/页</option>
@@ -92,7 +92,7 @@
         data['count'] = count;
 
         var currentPage = 1;
-        var pageSize = 5;
+        var pageSize = 6;
         var total = count;
         var totalsize = 1;
         var is_filtered = false;
