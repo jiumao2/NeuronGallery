@@ -6,6 +6,7 @@
         <script type="text/javascript" src="jquery.js"></script>
         <script type="text/javascript" src="Neurons.js"></script>
         <script type="text/javascript" src="util.js"></script>
+        <link rel="stylesheet" type="text/css" href="style_detail.css">
     </head>
     <body>
         <div id="img-detail"></div>
@@ -19,7 +20,6 @@
                 var data = JSON.parse(s)
                 console.log(count) 
                 console.log(data)  
-                console.log(get_html_child_img_result(data[ID]))   
                 var features = Object.keys(data[ID]);
                 var value;
                 for(var k=0;k<features.length;k++){

@@ -81,7 +81,6 @@ function get_features_value(data){
             features.splice(temp,1);
         }
     }
-    console.log(features)
 
     for(var k=0;k<features.length;k++){
         out[features[k]] = [];

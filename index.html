@@ -142,6 +142,7 @@
         
         $("#btn-confirm").click(function(){
             data_filtered = get_filtered_data(data);
+            console.log(data_filtered)
             currentPage = 1;
             total = data_filtered.length;
             is_filtered = true
@@ -223,8 +224,8 @@
             $(".div-result-right").remove();
             $(".layui-laypage-count").text("共"+total+"条");
             if(is_filtered){
-                var i0 = pageSize*(currentPage-1)+1;
-                for (var i=i0;i<=Math.min(pageSize*currentPage,total);i++){
+                var i0 = pageSize*(currentPage-1); // data_filter start at 0
+                for (var i=i0;i<Math.min(pageSize*currentPage,total);i++){
                     if ((i-i0)%2==0){
                         $('#id_img').append($(get_html_child_img_result(data_filtered[i],'left')))
                     }
@@ -234,7 +235,7 @@
                 }             
             }
             else{
-                var i0 = pageSize*(currentPage-1)+1;
+                var i0 = pageSize*(currentPage-1)+1; // data start at 1
                 for (var i=i0;i<=Math.min(pageSize*currentPage,total);i++){
                     if ((i-i0)%2==0){
                         $('#id_img').append($(get_html_child_img_result(data[i],'left')))
