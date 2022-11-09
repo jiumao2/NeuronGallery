@@ -633,7 +633,7 @@
         "Region": "M1",
         "ImgPath": "Images/Eli/20210923/Ch5_Unit1.png",
         "OtherImgPath": "",
-        "Lift": "1",
+        "Lift": "",
         "Press": "",
         "Holding": "",
         "Trigger": "",
@@ -664,7 +664,7 @@
         "Path": "A:\\Ephys\\ANMs\\Eli\\20210923\\RTarrayAll.mat",
         "Region": "M1",
         "ImgPath": "Images/Eli/20210923/Ch5_Unit3.png",
-        "OtherImgPath": "",
+        "OtherImgPath": "Images/Eli/20210923/Lift_cell_unit_5/position_heatmap.png;Images/Eli/20210923/Lift_cell_unit_5/position_heatmap_yt.png;Images/Eli/20210923/Lift_cell_unit_5/traj_all.png;Images/Eli/20210923/Lift_cell_unit_5/traj_all_yt.png",
         "Lift": "1",
         "Press": "",
         "Holding": "",
@@ -760,7 +760,7 @@
         "Path": "A:\\Ephys\\ANMs\\Eli\\20210923\\RTarrayAll.mat",
         "Region": "M1",
         "ImgPath": "Images/Eli/20210923/Ch10_Unit1.png",
-        "OtherImgPath": "",
+        "OtherImgPath": "Images/Eli/20210923/Lift_cell_unit_10/position_heatmap.png;Images/Eli/20210923/Lift_cell_unit_10/position_heatmap_yt.png;Images/Eli/20210923/Lift_cell_unit_10/traj_all.png;Images/Eli/20210923/Lift_cell_unit_10/traj_all_yt.png",
         "Lift": "1",
         "Press": "",
         "Holding": "",
@@ -776,7 +776,7 @@
         "Path": "A:\\Ephys\\ANMs\\Eli\\20210923\\RTarrayAll.mat",
         "Region": "M1",
         "ImgPath": "Images/Eli/20210923/Ch13_Unit1.png",
-        "OtherImgPath": "",
+        "OtherImgPath": "Images/Eli/20210923/Lift_cell_unit_12/position_heatmap.png;Images/Eli/20210923/Lift_cell_unit_12/position_heatmap_yt.png;Images/Eli/20210923/Lift_cell_unit_12/traj_all.png;Images/Eli/20210923/Lift_cell_unit_12/traj_all_yt.png",
         "Lift": "1",
         "Press": "",
         "Holding": "",
@@ -792,7 +792,7 @@
         "Path": "A:\\Ephys\\ANMs\\Eli\\20210923\\RTarrayAll.mat",
         "Region": "M1",
         "ImgPath": "Images/Eli/20210923/Ch15_Unit1.png",
-        "OtherImgPath": "",
+        "OtherImgPath": "Images/Eli/20210923/Lift_cell_unit_14/position_heatmap.png;Images/Eli/20210923/Lift_cell_unit_14/position_heatmap_yt.png;Images/Eli/20210923/Lift_cell_unit_14/traj_all.png;Images/Eli/20210923/Lift_cell_unit_14/traj_all_yt.png",
         "Lift": "1",
         "Press": "",
         "Holding": "",
@@ -802,13 +802,13 @@
     "51": {
         "ID": "51",
         "Animal": "Eli",
-        "Date": "9/24/2021 9:06",
+        "Date": "9/23/2021 8:58",
         "Channel": "15",
         "Cluster": "2",
-        "Path": "A:\\Ephys\\ANMs\\Eli\\20210924\\RTarrayAll.mat",
+        "Path": "A:\\Ephys\\ANMs\\Eli\\20210923\\RTarrayAll.mat",
         "Region": "M1",
-        "ImgPath": "Images/Eli/20210924/Ch15_Unit2.png",
-        "OtherImgPath": "",
+        "ImgPath": "Images/Eli/20210923/Ch15_Unit2.png",
+        "OtherImgPath": "Images/Eli/20210923/Lift_cell_unit_15/position_heatmap.png;Images/Eli/20210923/Lift_cell_unit_15/position_heatmap_yt.png;Images/Eli/20210923/Lift_cell_unit_15/traj_all.png;Images/Eli/20210923/Lift_cell_unit_15/traj_all_yt.png",
         "Lift": "1",
         "Press": "",
         "Holding": "",
@@ -817,22 +817,6 @@
     },
     "52": {
         "ID": "52",
-        "Animal": "Eli",
-        "Date": "9/23/2021 8:58",
-        "Channel": "15",
-        "Cluster": "2",
-        "Path": "A:\\Ephys\\ANMs\\Eli\\20210923\\RTarrayAll.mat",
-        "Region": "M1",
-        "ImgPath": "Images/Eli/20210923/Ch15_Unit2.png",
-        "OtherImgPath": "",
-        "Lift": "1",
-        "Press": "",
-        "Holding": "",
-        "Trigger": "",
-        "Release": ""
-    },
-    "53": {
-        "ID": "53",
         "Animal": "Davis",
         "Date": "3/22/2022 8:36",
         "Channel": "1",
@@ -847,8 +831,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "54": {
-        "ID": "54",
+    "53": {
+        "ID": "53",
         "Animal": "Davis",
         "Date": "3/23/2022 8:18",
         "Channel": "1",
@@ -863,8 +847,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "55": {
-        "ID": "55",
+    "54": {
+        "ID": "54",
         "Animal": "Davis",
         "Date": "3/29/2022 7:19",
         "Channel": "1",
@@ -879,8 +863,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "56": {
-        "ID": "56",
+    "55": {
+        "ID": "55",
         "Animal": "Davis",
         "Date": "3/29/2022 7:19",
         "Channel": "2",
@@ -895,8 +879,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "57": {
-        "ID": "57",
+    "56": {
+        "ID": "56",
         "Animal": "Davis",
         "Date": "3/31/2022 6:51",
         "Channel": "1",
@@ -911,8 +895,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "58": {
-        "ID": "58",
+    "57": {
+        "ID": "57",
         "Animal": "Davis",
         "Date": "3/31/2022 6:51",
         "Channel": "1",
@@ -927,8 +911,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "59": {
-        "ID": "59",
+    "58": {
+        "ID": "58",
         "Animal": "Davis",
         "Date": "3/31/2022 6:51",
         "Channel": "2",
@@ -943,8 +927,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "60": {
-        "ID": "60",
+    "59": {
+        "ID": "59",
         "Animal": "Davis",
         "Date": "3/31/2022 6:51",
         "Channel": "3",
@@ -959,8 +943,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "61": {
-        "ID": "61",
+    "60": {
+        "ID": "60",
         "Animal": "Davis",
         "Date": "3/31/2022 6:51",
         "Channel": "4",
@@ -975,8 +959,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "62": {
-        "ID": "62",
+    "61": {
+        "ID": "61",
         "Animal": "Davis",
         "Date": "4/6/2022 9:54",
         "Channel": "2",
@@ -991,8 +975,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "63": {
-        "ID": "63",
+    "62": {
+        "ID": "62",
         "Animal": "Davis",
         "Date": "4/6/2022 9:54",
         "Channel": "3",
@@ -1007,8 +991,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "64": {
-        "ID": "64",
+    "63": {
+        "ID": "63",
         "Animal": "Davis",
         "Date": "4/6/2022 9:54",
         "Channel": "3",
@@ -1023,8 +1007,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "65": {
-        "ID": "65",
+    "64": {
+        "ID": "64",
         "Animal": "Davis",
         "Date": "4/6/2022 9:54",
         "Channel": "4",
@@ -1039,8 +1023,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "66": {
-        "ID": "66",
+    "65": {
+        "ID": "65",
         "Animal": "Davis",
         "Date": "4/26/2022 8:20",
         "Channel": "1",
@@ -1055,8 +1039,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "67": {
-        "ID": "67",
+    "66": {
+        "ID": "66",
         "Animal": "Davis",
         "Date": "4/26/2022 8:20",
         "Channel": "1",
@@ -1071,8 +1055,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "68": {
-        "ID": "68",
+    "67": {
+        "ID": "67",
         "Animal": "Davis",
         "Date": "4/26/2022 8:20",
         "Channel": "1",
@@ -1087,8 +1071,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "69": {
-        "ID": "69",
+    "68": {
+        "ID": "68",
         "Animal": "Davis",
         "Date": "4/26/2022 8:20",
         "Channel": "1",
@@ -1103,8 +1087,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "70": {
-        "ID": "70",
+    "69": {
+        "ID": "69",
         "Animal": "Davis",
         "Date": "4/26/2022 8:20",
         "Channel": "1",
@@ -1119,8 +1103,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "71": {
-        "ID": "71",
+    "70": {
+        "ID": "70",
         "Animal": "Davis",
         "Date": "5/5/2022 10:37",
         "Channel": "3",
@@ -1135,8 +1119,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "72": {
-        "ID": "72",
+    "71": {
+        "ID": "71",
         "Animal": "Davis",
         "Date": "5/5/2022 10:37",
         "Channel": "4",
@@ -1151,8 +1135,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "73": {
-        "ID": "73",
+    "72": {
+        "ID": "72",
         "Animal": "Davis",
         "Date": "5/5/2022 10:37",
         "Channel": "4",
@@ -1167,8 +1151,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "74": {
-        "ID": "74",
+    "73": {
+        "ID": "73",
         "Animal": "Davis",
         "Date": "5/12/2022 12:46",
         "Channel": "1",
@@ -1183,8 +1167,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "75": {
-        "ID": "75",
+    "74": {
+        "ID": "74",
         "Animal": "Davis",
         "Date": "5/18/2022 11:21",
         "Channel": "1",
@@ -1199,8 +1183,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "76": {
-        "ID": "76",
+    "75": {
+        "ID": "75",
         "Animal": "Davis",
         "Date": "5/18/2022 11:21",
         "Channel": "1",
@@ -1215,8 +1199,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "77": {
-        "ID": "77",
+    "76": {
+        "ID": "76",
         "Animal": "Davis",
         "Date": "5/18/2022 11:21",
         "Channel": "4",
@@ -1231,8 +1215,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "78": {
-        "ID": "78",
+    "77": {
+        "ID": "77",
         "Animal": "Davis",
         "Date": "5/25/2022 12:57",
         "Channel": "1",
@@ -1247,8 +1231,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "79": {
-        "ID": "79",
+    "78": {
+        "ID": "78",
         "Animal": "Davis",
         "Date": "5/25/2022 12:57",
         "Channel": "1",
@@ -1263,8 +1247,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "80": {
-        "ID": "80",
+    "79": {
+        "ID": "79",
         "Animal": "Davis",
         "Date": "5/25/2022 12:57",
         "Channel": "2",
@@ -1279,8 +1263,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "81": {
-        "ID": "81",
+    "80": {
+        "ID": "80",
         "Animal": "Chen",
         "Date": "4/2/2022 12:49",
         "Channel": "1",
@@ -1295,8 +1279,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "82": {
-        "ID": "82",
+    "81": {
+        "ID": "81",
         "Animal": "Chen",
         "Date": "4/2/2022 12:49",
         "Channel": "1",
@@ -1311,8 +1295,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "83": {
-        "ID": "83",
+    "82": {
+        "ID": "82",
         "Animal": "Chen",
         "Date": "4/2/2022 12:49",
         "Channel": "4",
@@ -1327,8 +1311,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "84": {
-        "ID": "84",
+    "83": {
+        "ID": "83",
         "Animal": "Chen",
         "Date": "4/26/2022 7:07",
         "Channel": "1",
@@ -1343,8 +1327,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "85": {
-        "ID": "85",
+    "84": {
+        "ID": "84",
         "Animal": "Chen",
         "Date": "5/7/2022 11:45",
         "Channel": "1",
@@ -1359,8 +1343,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "86": {
-        "ID": "86",
+    "85": {
+        "ID": "85",
         "Animal": "Chen",
         "Date": "5/7/2022 11:45",
         "Channel": "3",
@@ -1375,8 +1359,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "87": {
-        "ID": "87",
+    "86": {
+        "ID": "86",
         "Animal": "Chen",
         "Date": "5/7/2022 11:45",
         "Channel": "4",
@@ -1391,8 +1375,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "88": {
-        "ID": "88",
+    "87": {
+        "ID": "87",
         "Animal": "Chen",
         "Date": "5/13/2022 12:08",
         "Channel": "1",
@@ -1407,8 +1391,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "89": {
-        "ID": "89",
+    "88": {
+        "ID": "88",
         "Animal": "Chen",
         "Date": "5/13/2022 12:08",
         "Channel": "3",
@@ -1423,8 +1407,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "90": {
-        "ID": "90",
+    "89": {
+        "ID": "89",
         "Animal": "Chen",
         "Date": "5/13/2022 12:08",
         "Channel": "4",
@@ -1439,8 +1423,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "91": {
-        "ID": "91",
+    "90": {
+        "ID": "90",
         "Animal": "Chen",
         "Date": "5/13/2022 12:08",
         "Channel": "4",
@@ -1455,8 +1439,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "92": {
-        "ID": "92",
+    "91": {
+        "ID": "91",
         "Animal": "Chen",
         "Date": "5/13/2022 12:08",
         "Channel": "4",
@@ -1471,8 +1455,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "93": {
-        "ID": "93",
+    "92": {
+        "ID": "92",
         "Animal": "Chen",
         "Date": "5/13/2022 12:08",
         "Channel": "4",
@@ -1487,8 +1471,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "94": {
-        "ID": "94",
+    "93": {
+        "ID": "93",
         "Animal": "Chen",
         "Date": "5/18/2022 10:03",
         "Channel": "2",
@@ -1503,8 +1487,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "95": {
-        "ID": "95",
+    "94": {
+        "ID": "94",
         "Animal": "Chen",
         "Date": "5/18/2022 10:03",
         "Channel": "3",
@@ -1519,8 +1503,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "96": {
-        "ID": "96",
+    "95": {
+        "ID": "95",
         "Animal": "Chen",
         "Date": "5/18/2022 10:03",
         "Channel": "3",
@@ -1535,8 +1519,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "97": {
-        "ID": "97",
+    "96": {
+        "ID": "96",
         "Animal": "Chen",
         "Date": "5/18/2022 10:03",
         "Channel": "3",
@@ -1551,8 +1535,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "98": {
-        "ID": "98",
+    "97": {
+        "ID": "97",
         "Animal": "Chen",
         "Date": "5/18/2022 10:03",
         "Channel": "3",
@@ -1567,8 +1551,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "99": {
-        "ID": "99",
+    "98": {
+        "ID": "98",
         "Animal": "Chen",
         "Date": "5/18/2022 10:03",
         "Channel": "3",
@@ -1583,8 +1567,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "100": {
-        "ID": "100",
+    "99": {
+        "ID": "99",
         "Animal": "Chen",
         "Date": "5/18/2022 10:03",
         "Channel": "3",
@@ -1599,8 +1583,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "101": {
-        "ID": "101",
+    "100": {
+        "ID": "100",
         "Animal": "Chen",
         "Date": "6/6/2022 12:35",
         "Channel": "2",
@@ -1615,8 +1599,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "102": {
-        "ID": "102",
+    "101": {
+        "ID": "101",
         "Animal": "Chen",
         "Date": "6/6/2022 12:35",
         "Channel": "3",
@@ -1631,8 +1615,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "103": {
-        "ID": "103",
+    "102": {
+        "ID": "102",
         "Animal": "Chen",
         "Date": "6/6/2022 12:35",
         "Channel": "3",
@@ -1647,8 +1631,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "104": {
-        "ID": "104",
+    "103": {
+        "ID": "103",
         "Animal": "Chen",
         "Date": "6/6/2022 12:35",
         "Channel": "3",
@@ -1663,8 +1647,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "105": {
-        "ID": "105",
+    "104": {
+        "ID": "104",
         "Animal": "Chen",
         "Date": "6/6/2022 12:35",
         "Channel": "4",
@@ -1679,8 +1663,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "106": {
-        "ID": "106",
+    "105": {
+        "ID": "105",
         "Animal": "Chen",
         "Date": "6/6/2022 12:35",
         "Channel": "4",
@@ -1695,8 +1679,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "107": {
-        "ID": "107",
+    "106": {
+        "ID": "106",
         "Animal": "Chen",
         "Date": "6/8/2022 11:41",
         "Channel": "4",
@@ -1711,8 +1695,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "108": {
-        "ID": "108",
+    "107": {
+        "ID": "107",
         "Animal": "Chen",
         "Date": "6/15/2022 10:12",
         "Channel": "3",
@@ -1727,8 +1711,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "109": {
-        "ID": "109",
+    "108": {
+        "ID": "108",
         "Animal": "Chen",
         "Date": "6/15/2022 10:12",
         "Channel": "3",
@@ -1743,8 +1727,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "110": {
-        "ID": "110",
+    "109": {
+        "ID": "109",
         "Animal": "Chen",
         "Date": "6/15/2022 10:12",
         "Channel": "4",
@@ -1759,8 +1743,8 @@
         "Trigger": "1",
         "Release": ""
     },
-    "111": {
-        "ID": "111",
+    "110": {
+        "ID": "110",
         "Animal": "Chen",
         "Date": "6/21/2022 12:35",
         "Channel": "3",
@@ -1775,8 +1759,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "112": {
-        "ID": "112",
+    "111": {
+        "ID": "111",
         "Animal": "Chen",
         "Date": "6/21/2022 12:35",
         "Channel": "3",
@@ -1791,8 +1775,8 @@
         "Trigger": "",
         "Release": ""
     },
-    "113": {
-        "ID": "113",
+    "112": {
+        "ID": "112",
         "Animal": "Chen",
         "Date": "6/21/2022 12:35",
         "Channel": "4",
